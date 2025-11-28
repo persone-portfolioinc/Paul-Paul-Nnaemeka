@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[[REPLACE: Jordan Kim]] – No-Code Product Engineer & Team Automation Lead. I build production tools that scale with teams using AppSheet, Google Workspace, Excel, and modern web tech.">
+    <meta name="keywords" content="no-code engineer, appsheet developer, google workspace automation, excel vba expert, data integration, workflow automation, internal tools, team collaboration, dashboard design, process optimization">
+    <meta name="author" content="[[REPLACE: Jordan Kim]]">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Paul Nnaemeka Okafor – No-Code Product Engineer">
+    <meta property="og:description" content="I design, build, and deploy automation systems that empower teams to work smarter.">
+    <meta property="og:url" content="https://[[REPLACE: jordan.kim]]">
+    <meta property="og:type" content="website">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Paul Nnaemeka Okafor",
+        "jobTitle": "No-Code Product Engineer & Automation Lead",
+        "url": "https://[[REPLACE: jordan.kim]]",
+        "sameAs": [
+            "https://linkedin.com/in/[[REPLACE: jordan-kim]]",
+            "https://github.com/[[REPLACE: jordan-kim]]"
+        ],
+        "email": "Paulpaulnnaemeka@gmail.com",
+        "telephone": "+44818134608",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Available for Full-Time & Contract Roles"
+        }
+    }
+    </script>
+
+    <title>Paul Nnaemeka Okafor – System - Product Optimisation Engineer</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0066FF;
+            --primary-dark: #0044CC;
+            --text: #0F172A;
+            --text-light: #475569;
+            --bg: #FAFBFF;
+            --bg-alt: #F1F5F9;
+            --border: #E2E8F0;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .font-hero { font-family: 'Space Grotesk', system-ui, sans-serif; }
+
+        /* HERO BACKGROUND */
+        #hero-bg {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .floating-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.16;
+            animation: float 22s infinite ease-in-out;
+            will-change: transform;
+        }
+
+        .blob-1 {
+            width: 580px;
+            height: 580px;
+            background: var(--primary);
+            top: -15%;
+            left: -10%;
+            animation-delay: 0s;
+        }
+
+        .blob-2 {
+            width: 720px;
+            height: 720px;
+            background: var(--primary-dark);
+            bottom: -20%;
+            right: -15%;
+            animation-delay: 8s;
+        }
+
+        @keyframes float {
+            0% { transform: translate3d(0, 0, 0) rotate(0deg); }
+            25% { transform: translate3d(60px, -40px, 0) rotate(90deg); }
+            50% { transform: translate3d(-40px, 60px, 0) rotate(180deg); }
+            75% { transform: translate3d(40px, 40px, 0) rotate(270deg); }
+            100% { transform: translate3d(0, 0, 0) rotate(360deg); }
+        }
+
+        /* MODERN RECTANGULAR PROFILE CARD */
+        .profile-card {
+            position: relative;
+            width: 320px;
+            height: 420px;
+            border-radius: 26px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #ffffff, #f8f9fc);
+            box-shadow: 0 24px 48px -16px rgba(15, 23, 42, 0.35);
+            transform: perspective(1100px) rotateY(-10deg) rotateX(5deg);
+            transition: all 0.45s ease;
+        }
+
+        .profile-card:hover {
+            transform: perspective(1100px) rotateY(-4deg) rotateX(2deg) translateY(-10px);
+            box-shadow: 0 32px 64px -24px rgba(15, 23, 42, 0.55);
+        }
+
+        .profile-card::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: conic-gradient(
+                from 0deg at 50% 50%,
+                var(--primary),
+                var(--primary-dark),
+                #00D4FF,
+                var(--primary)
+            );
+            border-radius: 30px;
+            z-index: -1;
+            animation: rotate 16s linear infinite;
+        }
+
+        .profile-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 24px;
+            overflow: hidden;
+            background: radial-gradient(circle at 0% 0%, rgba(148, 163, 184, 0.35), transparent 55%);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform-origin: center;
+            clip-path: polygon(0 0, 100% 0, 100% 82%, 0 100%);
+            transition: transform 0.45s ease, clip-path 0.45s ease;
+        }
+
+        .profile-card:hover .profile-img {
+            transform: scale(1.06);
+            clip-path: polygon(0 0, 100% 0, 100% 76%, 0 92%);
+        }
+
+        .profile-badge {
+            position: absolute;
+            top: 1.1rem;
+            left: 1.1rem;
+            padding: 0.35rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            background: rgba(15, 23, 42, 0.78);
+            color: #e5e7eb;
+            backdrop-filter: blur(10px);
+        }
+
+        .profile-overlay {
+            position: absolute;
+            inset-inline: 0;
+            bottom: 0;
+            padding: 1.5rem 1.7rem 1.7rem;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.95), transparent 90%);
+            color: #f9fafb;
+            transform: translateY(24px);
+            opacity: 0;
+            transition: all 0.45s ease;
+        }
+
+        .profile-card:hover .profile-overlay {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .profile-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .profile-role {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.1rem;
+        }
+
+        .profile-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 0.7rem;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.09em;
+            opacity: 0.85;
+        }
+
+        @keyframes rotate {
+            to { transform: rotate(360deg); }
+        }
+
+        /* EFFECTS */
+        .hover-scale {
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .hover-scale:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 32px -10px rgba(15, 23, 42, 0.18);
+        }
+
+        .btn-anim {
+            position: relative;
+            overflow: hidden;
+            isolation: isolate;
+        }
+
+        .btn-anim::after {
+            content: '';
+            position: absolute;
+            inset: 50%;
+            width: 350%;
+            height: 350%;
+            background: rgba(255, 255, 255, 0.25);
+            transform: translate(-50%, -50%) scale(0);
+            border-radius: 9999px;
+            transition: transform 0.55s ease;
+            z-index: -1;
+        }
+
+        .btn-anim:hover::after {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .gradient-bg { background: linear-gradient(135deg, var(--primary), var(--primary-dark)); }
+        .divider { fill: var(--primary); width: 100%; height: 80px; display: block; }
+        .pulse-glow { animation: pulse 2.5s infinite; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.04); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[var(--bg)] text-[var(--text)] antialiased">
+
+    <!-- Navigation -->
+    <header class="fixed inset-x-0 top-0 z-50 bg-white/90 backdrop-blur-lg shadow-sm border-b border-[var(--border)]">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center space-x-3 group">
+                    <div class="w-12 h-12 gradient-bg rounded-xl flex items-center justify-center group-hover:rotate-12 transition-transform duration-300">
+                        <span class="text-white font-bold text-xl">[[REPLACE: JK]]</span>
+                    </div>
+                    <span class="text-2xl font-bold font-hero bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] bg-clip-text text-transparent">
+                        Paul Nnaemeka Okafor
+                    </span>
+                </a>
+                <div class="hidden md:flex items-center space-x-1">
+                    <a href="#about" class="px-5 py-2 rounded-lg hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] transition-all font-medium">About</a>
+                    <a href="#projects" class="px-5 py-2 rounded-lg hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] transition-all font-medium">Projects</a>
+                    <a href="#skills" class="px-5 py-2 rounded-lg hover:bg-[var(--primary)]/10 hover:text-[var(--primary)] transition-all font-medium">Skills</a>
+                    <a href="#contact" class="ml-3 px-7 py-2.5 gradient-bg text-white rounded-full hover:shadow-xl hover:scale-105 transition-transform font-semibold btn-anim">
+                        Join a Team
+                    </a>
+                </div>
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-[var(--primary)]/10" aria-label="Toggle navigation">
+                    <svg id="menu-icon" class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+                    <svg id="close-icon" class="hidden h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#about" class="block px-5 py-3 rounded-lg hover:bg-[var(--primary)]/10">About</a>
+                <a href="#projects" class="block px-5 py-3 rounded-lg hover:bg-[var(--primary)]/10">Projects</a>
+                <a href="#skills" class="block px-5 py-3 rounded-lg hover:bg-[var(--primary)]/10">Skills</a>
+                <a href="#contact" class="block px-7 py-3 gradient-bg text-white rounded-lg text-center font-semibold">Join a Team</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-24 scroll-mt-24">
+            <div id="hero-bg">
+                <div class="floating-blob blob-1"></div>
+                <div class="floating-blob blob-2"></div>
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-br from-black/5 via-transparent to-black/5 pointer-events-none"></div>
+            <div class="text-center z-10 px-4 max-w-5xl mx-auto" data-aos="fade-up">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight font-hero">
+                    I Build <span class="gradient-bg bg-clip-text text-transparent">Automation That Scales</span><br>
+                    <span class="text-4xl md:text-6xl">With Your Team</span>
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-[var(--text-light)] leading-relaxed max-w-3xl mx-auto">
+                    Proven systems in <strong>AppSheet, Google Workspace, Excel, and web tech</strong> — designed for collaboration, adoption, and long-term success.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#projects" class="inline-block px-9 py-4 bg-white text-[var(--primary)] rounded-full text-lg font-bold btn-anim shadow-xl hover:shadow-2xl hover:scale-105 transition-transform">
+                        See Team-Ready Projects
+                    </a>
+                    <a href="#contact" class="inline-block px-9 py-4 border-2 border-[var(--primary)] text-[var(--primary)] rounded-full text-lg font-bold hover:bg-[var(--primary)] hover:text-white transition-all">
+                        Hire for Your Team
+                    </a>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+                <svg class="w-8 h-8 text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                </svg>
+            </div>
+        </section>
+
+        <svg class="divider" viewBox="0 0 1440 80"><path d="M0,80 C360,20 1080,140 1440,80 L1440,80 L0,80 Z"></path></svg>
+
+        <!-- About Me -->
+        <section id="about" class="py-24 bg-gradient-to-br from-[var(--bg-alt)] to-white scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="inline-block px-5 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-bold mb-5 tracking-wide">
+                        TEAM-FOCUSED ENGINEER
+                    </span>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 font-hero bg-gradient-to-r from-[var(--primary)] to-[var(--primary-dark)] bg-clip-text text-transparent">
+                        I Empower Teams to Move Faster
+                    </h2>
+                    <p class="text-xl text-[var(--text-light)] max-w-3xl mx-auto leading-relaxed">
+                        I design and deliver automation solutions that <strong>integrate seamlessly into team workflows</strong>, reduce friction, and scale with growth.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-16 items-center">
+                    <!-- Left: Modern Profile Card + Stats -->
+                    <div class="flex flex-col items-center lg:items-start gap-10" data-aos="fade-right">
+                        <div class="profile-card">
+                            <div class="profile-inner">
+                                <img 
+                                    src="https://via.placeholder.com/600x800/0F172A/ffffff?text=JK" 
+                                    alt="Paul Nnaemeka Okafor – System - Product Optimisation Engineer" 
+                                    class="profile-img"
+                                    loading="lazy"
+                                >
+                                <span class="profile-badge">TEAM-FIRST BUILDER</span>
+                                <div class="profile-overlay">
+                                    <div class="profile-name">Paul Nnaemeka Okafor</div>
+                                    <div class="profile-role">System - Product Optimisation Engineer & Automation Lead</div>
+                                    <div class="profile-meta">
+                                        <span>6 Production Systems</span>
+                                        <span>3× Faster Processes</span>
+                                        <span>100% Adoption</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-3 gap-4 w-full max-w-md text-center">
+                            <div class="p-5 bg-white rounded-2xl shadow-lg border border-[var(--border)]">
+                                <div class="text-4xl font-bold text-[var(--primary)]">6</div>
+                                <div class="text-sm text-[var(--text-light)]">Production Systems</div>
+                            </div>
+                            <div class="p-5 bg-white rounded-2xl shadow-lg border border-[var(--border)]">
+                                <div class="text-4xl font-bold text-[var(--primary)]">100%</div>
+                                <div class="text-sm text-[var(--text-light)]">Team Adoption</div>
+                            </div>
+                            <div class="p-5 bg-white rounded-2xl shadow-lg border border-[var(--border)]">
+                                <div class="text-4xl font-bold text-[var(--primary)]">3×</div>
+                                <div class="text-sm text-[var(--text-light)]">Faster Processes</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Team Values -->
+                    <div class="space-y-8" data-aos="fade-left">
+                        <article class="flex items-start space-x-5">
+                            <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center flex-shrink-0 pulse-glow">
+                                <i class="fas fa-users text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Collaborative by Design</h3>
+                                <p class="text-[var(--text-light)]">I work closely with stakeholders to understand real needs and build solutions everyone can use from day one.</p>
+                            </div>
+                        </article>
+                        <article class="flex items-start space-x-5">
+                            <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center flex-shrink-0 pulse-glow">
+                                <i class="fas fa-sitemap text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Systems That Scale</h3>
+                                <p class="text-[var(--text-light)]">Every build is designed for multi-user access, role-based permissions, and safe handover to internal teams.</p>
+                            </div>
+                        </article>
+                        <article class="flex items-start space-x-5">
+                            <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center flex-shrink-0 pulse-glow">
+                                <i class="fas fa-handshake text-white text-2xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Documentation & Training</h3>
+                                <p class="text-[var(--text-light)]">Clear guides, live walkthroughs, and ongoing support so teams can confidently own and evolve the system.</p>
+                            </div>
+                        </article>
+                        <div class="flex flex-wrap gap-3 pt-2">
+                            <span class="px-5 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-bold">Team Training</span>
+                            <span class="px-5 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-bold">Process Mapping</span>
+                            <span class="px-5 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-bold">Scalable Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-24 bg-white scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <span class="inline-block px-5 py-2 bg-[var(--primary)]/10 text-[var(--primary)] rounded-full text-sm font-bold mb-5 tracking-wide">TEAM-READY SOLUTIONS</span>
+                    <h2 class="text-5xl md:text-6xl font-bold mb-6 font-hero text-[var(--primary)]">Systems Built for Collaboration</h2>
+                    <p class="text-xl text-[var(--text-light)] max-w-3xl mx-auto">Each tool is designed for <strong>multi-user access, role-based controls, and easy handover</strong>.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="100">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Team CV & Portfolio Platform</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Web app that auto-generates CVs, cover letters, and hosts live portfolios with role-based access.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        A secure, multi-user web platform that enables HR, recruiters, and candidates to collaboratively build, review,
+                                        and publish professional CVs and personal portfolio sites — fully hosted and branded.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Manual CV formatting across teams leads to inconsistency and delays</li>
+                                        <li>No centralized system for portfolio hosting or version control</li>
+                                        <li>Candidates lack real-time editing access; HR bottlenecks approvals</li>
+                                        <li>No audit trail of who edited what and when</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>90% reduction in CV prep time per hire</li>
+                                        <li>100% brand-compliant documents via templates</li>
+                                        <li>Live portfolio sites for 50+ employees in &lt;5 mins</li>
+                                        <li>Full audit log supports compliance (GDPR, ISO)</li>
+                                        <li>Eliminates email back-and-forth — all edits in one place</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto flex gap-4 text-sm font-semibold">
+                                <a href="[[REPLACE: https://cv.jordan.kim]]" target="_blank" class="text-[var(--primary)] hover:underline">Live →</a>
+                                <a href="[[REPLACE: https://github.com/jordan-kim/cv-platform]]" target="_blank" class="text-[var(--text-light)] hover:underline">Code</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="200">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Stock Request & Approval System</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Enterprise-grade AppSheet workflow with role-based access, notifications, and audit trails.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        A mobile-first AppSheet application that automates stock requisitions from request → assessment → multi-level approval
+                                        → fulfillment, with real-time status tracking for all stakeholders.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Paper/email-based requests get lost or delayed</li>
+                                        <li>No visibility into stock approval status or bottlenecks</li>
+                                        <li>Over- or under-stocking due to poor demand forecasting</li>
+                                        <li>No accountability — unclear who approved/declined</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>75% faster stock fulfillment (from 3 days → &lt;18 hours)</li>
+                                        <li>Zero lost requests — full digital audit trail</li>
+                                        <li>30% reduction in excess inventory via demand insights</li>
+                                        <li>Managers spend &lt;5 mins/day on approvals (vs. 1hr+)</li>
+                                        <li>Mobile access = field teams can request on-the-go</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto flex gap-4 text-sm font-semibold">
+                                <a href="[[REPLACE: https://www.appsheet.com/start/abc123]]" target="_blank" class="text-[var(--primary)] hover:underline">Template →</a>
+                                <a href="[[REPLACE: https://youtu.be/demo123]]" target="_blank" class="text-[var(--text-light)] hover:underline">Demo</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="300">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Shared KPI Dashboard</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Real-time, interactive Looker Studio dashboard with department filters and scheduled reports.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        A centralized, role-filtered analytics dashboard that pulls live data from Sheets, databases, and APIs to deliver
+                                        actionable KPIs to sales, ops, finance, and leadership teams.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Teams use fragmented Excel reports with stale data</li>
+                                        <li>No single source of truth — conflicting numbers in meetings</li>
+                                        <li>Manual report generation takes hours weekly</li>
+                                        <li>Non-technical users can’t explore data independently</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Saved 15+ hours/week in report building</li>
+                                        <li>100% data alignment across departments</li>
+                                        <li>Auto-email reports to 40 stakeholders every Monday</li>
+                                        <li>Drill-down access empowers analysts — no SQL needed</li>
+                                        <li>Identified $45K in monthly revenue leakage via trend alerts</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="[[REPLACE: https://lookerstudio.google.com/reporting/abc123]]" target="_blank" class="text-[var(--primary)] font-bold hover:underline text-sm">View →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="400">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Team Task Notification Hub</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Automated alert system using Google Sheets + Apps Script + Slack/Email.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        A smart task monitoring system that tracks deadlines, assigns ownership, and pushes personalized reminders via Slack,
+                                        email, and mobile — ensuring nothing falls through the cracks.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Missed deadlines due to email overload or forgotten tasks</li>
+                                        <li>No visibility into who’s responsible for what</li>
+                                        <li>Managers nag team members instead of system reminding</li>
+                                        <li>No escalation path for overdue tasks</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>40% fewer missed deadlines in first quarter</li>
+                                        <li>Automated 200+ reminders/week — zero manager time</li>
+                                        <li>Escalation alerts to leads after 24h delay</li>
+                                        <li>Full task history supports performance reviews</li>
+                                        <li>Integrates with existing Sheets — no new tools to learn</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="[[REPLACE: https://docs.google.com/spreadsheets/d/abc123]]" target="_blank" class="text-[var(--primary)] font-bold hover:underline text-sm">Sheet →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="500">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Central Data Integration Layer</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Automated pipeline pulling from external databases into shared Google Sheets with access controls.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        A robust data integration system using Apps Script + JDBC that syncs live data from PostgreSQL, MySQL, or APIs into
+                                        team-accessible Google Sheets with row-level permissions and auto-refresh.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Teams manually export/import data from databases</li>
+                                        <li>Risk of errors in copy-paste workflows</li>
+                                        <li>Sensitive data exposed to unauthorized users</li>
+                                        <li>No real-time updates — decisions based on old data</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Eliminated 20+ hours/week of manual data entry</li>
+                                        <li>Real-time sync (every 15 mins) — always-current reports</li>
+                                        <li>Row-level security — finance sees costs, sales sees leads</li>
+                                        <li>Reduced data errors by 95%</li>
+                                        <li>Enabled self-service analytics for 30+ users</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="[[REPLACE: https://docs.google.com/spreadsheets/d/xyz789]]" target="_blank" class="text-[var(--primary)] font-bold hover:underline text-sm">Report →</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6 -->
+                    <article class="bg-[var(--bg)] rounded-3xl shadow-xl overflow-hidden hover-scale border border-[var(--border)] flex flex-col" data-aos="fade-up" data-aos-delay="600">
+                        <div class="h-48 project-img flex items-center justify-center text-[var(--primary)] text-4xl font-bold bg-gradient-to-br from-indigo-50 to-blue-100">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="p-7 flex flex-col flex-1">
+                            <h3 class="text-xl font-bold mb-2">Shared Workflow Engine (Excel/VBA)</h3>
+                            <p class="text-[var(--text-light)] mb-4">
+                                Multi-user Excel automation with role-based forms, validation, and version control.
+                            </p>
+
+                            <div class="space-y-3 text-sm text-[var(--text-light)] mb-4">
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Overview</h4>
+                                    <p>
+                                        An enterprise-grade Excel-based workflow engine with user forms, data validation, automated routing, and version-locked
+                                        archives — designed for teams still reliant on spreadsheets but needing structure.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Problems Solved</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Chaos in shared Excel files — overwrites, broken formulas</li>
+                                        <li>No approval workflow in legacy systems</li>
+                                        <li>Impossible to track changes or recover old versions</li>
+                                        <li>High error rate in manual data entry</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-[var(--text)] mb-1">Business Value Delivered</h4>
+                                    <ul class="list-disc list-inside space-y-1">
+                                        <li>Zero data loss — auto-backup + version history</li>
+                                        <li>80% reduction in formula errors via input forms</li>
+                                        <li>Built-in approval routing (3 levels) with digital signatures</li>
+                                        <li>10,000+ rows processed monthly with zero manual touch</li>
+                                        <li>Full training kit — new hires onboard in</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="[[REPLACE: https://1drv.ms/x/s!Abc123]]" target="_blank" class="text-[var(--primary)] font-bold hover:underline text-sm">File →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="py-24 bg-[var(--bg-alt)] scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20" data-aos="fade-up">
+                    <h2 class="text-5xl font-bold mb-6 font-hero text-[var(--primary)]">Team-Ready Expertise</h2>
+                    <p class="text-xl text-[var(--text-light)] max-w-3xl mx-auto">
+                        Tools and methods I use to deliver value in collaborative environments.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Platform</div>
+                        <div class="text-xl font-semibold mb-1">AppSheet</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Workflow Apps</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Platform</div>
+                        <div class="text-xl font-semibold mb-1">Google Sheets</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Data Systems</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Automation</div>
+                        <div class="text-xl font-semibold mb-1">Apps Script</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Event-Driven Logic</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Automation</div>
+                        <div class="text-xl font-semibold mb-1">VBA / Excel</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Legacy Integration</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="500">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Web</div>
+                        <div class="text-xl font-semibold mb-1">HTML / CSS / JS</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Internal Tools</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="600">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Analytics</div>
+                        <div class="text-xl font-semibold mb-1">Looker Studio</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Dashboards</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="700">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Method</div>
+                        <div class="text-xl font-semibold mb-1">Process Mapping</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Optimization</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg text-center hover-scale border border-[var(--border)]" data-aos="fade-up" data-aos-delay="800">
+                        <div class="text-sm tracking-wide uppercase text-[var(--text-light)] mb-1">Method</div>
+                        <div class="text-xl font-semibold mb-1">Team Training</div>
+                        <div class="text-sm font-medium text-[var(--primary)]">Knowledge Transfer</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="py-24 gradient-bg text-white scroll-mt-24">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-5xl md:text-6xl font-bold mb-6 font-hero">
+                    Ready to Join Your Team
+                </h2>
+                <p class="text-xl mb-10 max-w-2xl mx-auto">
+                    Looking for full-time, contract, or staff augmentation roles where I can deliver impact from day one.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-5 justify-center">
+                    <a href="mailto:paulpaulnnaemeka@gmail.com" class="bg-white text-[var(--primary)] px-9 py-4 rounded-full font-bold btn-anim hover:shadow-2xl text-lg">
+                        Email Me
+                    </a>
+                    <a href="mailto:paulpaulnnaemeka@gmail.com" target="_blank" class="bg-[var(--primary-dark)] text-white px-9 py-4 rounded-full font-bold btn-anim text-lg">
+                        Schedule Interview
+                    </a>
+                </div>
+                <p class="mt-10 text-lg">
+                    Connect on 
+                    <a href="https://www.linkedin.com/in/nnaemeka-okafor-04b352293" target="_blank" class="underline hover:opacity-80">LinkedIn</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white py-8 text-center text-sm text-[var(--text-light)] border-t">
+        <p>© 2025 Paul Nnaemeka Okafor – System - Product Optimisation Engineer. Available for team collaboration and long-term impact.</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 900, once: true });
+
+        const btn = document.getElementById('mobile-menu-button');
+        const menu = document.getElementById('mobile-menu');
+        const openIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            openIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
